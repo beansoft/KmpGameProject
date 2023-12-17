@@ -88,7 +88,12 @@ fun App() {
                         game.height = it.height.toDp()
                     }
                 }) {
-                ShipPreview()
+                game.gameObjects.forEach {
+                    when (it) {
+                        is ShipData -> Ship(it)
+                        else -> {}
+                    }
+                }
             }
         }
     }
