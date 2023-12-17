@@ -14,8 +14,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.BitmapPainter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.loadImageBitmap
+import androidx.compose.ui.res.useResource
 import androidx.compose.ui.unit.dp
 import com.jetbrains.game.Game
 import org.jetbrains.compose.resources.ExperimentalResourceApi
@@ -37,6 +42,22 @@ fun App() {
                 game.gameStatus,
                 modifier = Modifier.align(Alignment.CenterVertically).padding(horizontal = 16.dp),
                 color = Color.White
+            )
+        }
+
+        Box(
+            modifier = Modifier
+                .background(Color(80, 0, 80))
+                .fillMaxWidth()
+                .fillMaxHeight()
+        ) {
+            Image(
+                painter = BitmapPainter(useResource("Earth.jpg", ::loadImageBitmap)), "Test", modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight()
+                    .clipToBounds(),
+                contentScale = ContentScale.FillBounds
             )
         }
     }
