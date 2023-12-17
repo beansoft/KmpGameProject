@@ -12,6 +12,7 @@ kotlin {
     
     sourceSets {
         val desktopMain by getting
+
         
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -23,6 +24,7 @@ kotlin {
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
+            implementation(libs.openrndr.math)
         }
     }
 }
