@@ -1,3 +1,5 @@
+# Live Coding：用 Compose Multiplatform 写出第一个小游戏
+
 This is a Kotlin Multiplatform project targeting Desktop.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
@@ -17,3 +19,5 @@ desktopRun -DmainClass=MainKt
 
 运行截图：
 ![screenshot.png](screenshot.png)
+
+直播回放：https://mp.weixin.qq.com/s/YANZewiLqPKdZvAmwicTbw
