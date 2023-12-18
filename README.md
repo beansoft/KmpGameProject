@@ -14,3 +14,6 @@ Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-mu
 ```gradle
 desktopRun -DmainClass=MainKt
 ```
+
+运行截图：
+![screenshot.png](screenshot.png)

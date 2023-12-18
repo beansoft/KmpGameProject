@@ -9,7 +9,7 @@ import androidx.compose.ui.window.application
 fun main() = application {
     Window(onCloseRequest = ::exitApplication, title = "Asteroids",
         state = WindowState(
-            size = DpSize(700.dp, 900.dp)
+            size = DpSize(1920.dp, 1080.dp)
         )
     ) {
         App()
